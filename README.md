@@ -11,6 +11,7 @@ PyAudio
 https://people.csail.mit.edu/hubert/pyaudio/
 
 But in case you want to use more channels later, install the one from:
+
 	https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
 	
 	with ALSA support. 
@@ -19,9 +20,6 @@ from pip, you can install
 
 pyqt5
 pyqtgraph
-numpy
-
-
 
 
 From the original documentation of the orignal CBS (Catch Bird Singing, by David Perkel), 

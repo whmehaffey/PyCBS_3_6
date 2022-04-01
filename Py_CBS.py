@@ -125,11 +125,11 @@ def WorkingDirpushButtonClicked():
     import os
     import GlobalVars
     
-    dialog = QtGui.QFileDialog()
-    dialog.setFileMode(QtGui.QFileDialog.Directory)
-    dialog.setOption(QtGui.QFileDialog.ShowDirsOnly, True)
+    dialog = QtWidgets.QFileDialog()
+    dialog.setFileMode(QtWidgets.QFileDialog.Directory)
+    dialog.setOption(QtWidgets.QFileDialog.ShowDirsOnly, True)
     
-    directory = QtGui.QFileDialog.getExistingDirectory(dialog, 'Select Drive')
+    directory = QtWidgets.QFileDialog.getExistingDirectory(dialog, 'Select Drive')
     directory = str(directory)
     print(directory)
     GlobalVars.path=directory+'/'
