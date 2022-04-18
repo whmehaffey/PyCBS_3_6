@@ -53,7 +53,7 @@ def TriggeredRecordAudio(ui):
  import GlobalVars
  global graph_win
  
- MIN_DUR=GlobalVars.buffertime*2+0.1;
+ MIN_DUR=GlobalVars.buffertime+0.1;
  #isRunning 
 
  threshold=GlobalVars.threshold;
