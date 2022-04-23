@@ -52,6 +52,7 @@ def TriggeredRecordAudio(ui):
 
  import GlobalVars
  global graph_win
+ import audioop;
  
  MIN_DUR=GlobalVars.buffertime+0.1;
  #isRunning 
@@ -115,10 +116,11 @@ def TriggeredRecordAudio(ui):
       plotarray = array.array("h",data);  # force 16 bit, since that's the correct #
   else:
       plotarray=  array.array("i",data);  # not 16 bit, so.... 
-      
- 
-
-  if(sum([x > GlobalVars.threshold for x in plotarray])>0 and len(audio2send)<MAX_DUR*rel):    
+  
+  currmax=audioop.max(data,2);
+  
+  #pdb.set_trace();
+  if (currmax > GlobalVars.threshold) and (len(audio2send)<MAX_DUR*rel):    
    if(not started):
     ui.ListeningTextBox.setText('<span style="color:red">singing</span>')
     started = True
