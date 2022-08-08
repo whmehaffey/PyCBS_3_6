@@ -113,8 +113,7 @@ def InputSelectioncomboBoxChanged(newvalue):
     ui.SampleRatecomboBox.currentIndexChanged.connect(updateSampleRate);
     GlobalVars.SampleRate=int(ui.SampleRatecomboBox.currentText())
     GlobalVars.CHANNELS=devinfo['maxInputChannels']
-    
-    
+        
     p.terminate
   
 def BirdNameLineEditChanged(newvalue):
